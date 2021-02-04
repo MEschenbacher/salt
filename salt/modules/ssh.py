@@ -76,8 +76,8 @@ def _refine_enc(enc):
         return enc
     elif enc in ed25519:
         return "ssh-ed25519"
-    else:
-        raise CommandExecutionError("Incorrect encryption key type '{0}'.".format(enc))
+
+    return enc
 
 
 def _format_auth_line(key, enc, comment, options):
